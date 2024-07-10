@@ -37,6 +37,7 @@
   display: flex;
   flex-direction: column;
   transform: translateY(50%) translateY(-95px);
+  position: relative;
 }
 .roadmap > li:nth-child(even) > div {
   transform: translateY(-50%) translateY(95px);
@@ -53,12 +54,30 @@
 .roadmap > li > div > h3 {
   font-size: 54px;
   text-align: center;
-  margin: 0 0 40px 0;
+  padding: 0 0 40px 0;
+  margin: 0;
+  position: relative;
+}
+
+.roadmap > li + li > div > h3::before {
+  display: block;
+  content: url(../../assets/png/sparkle.png);
+  position: absolute;
+  line-height: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-50%) translate(1px) translateY(50%);
+}
+
+.roadmap > li:nth-child(even) > div > h3::before {
+  top: 0;
+  bottom: unset;
+  transform: translateX(-50%) translate(1px) translateY(-50%);
 }
 
 .roadmap > li:nth-child(even) > div > h3 {
   order: 1;
-  margin: 40px 0 0 0;
+  padding: 40px 0 0 0;
 }
 
 .roadmap > li > div > ul {
