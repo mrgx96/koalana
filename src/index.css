@@ -9,6 +9,11 @@
   src: url(./assets/font/syne.ttf);
 }
 
+@font-face {
+  font-family: Inter;
+  src: url(./assets/font/inter.ttf);
+}
+
 :root {
   font-family: Syne;
   line-height: 1;

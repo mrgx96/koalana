@@ -1,0 +1,101 @@
+.section {
+  padding-top: 90px;
+}
+
+.section > h2 {
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: -1px;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section > p {
+  font-family: Inter;
+  font-size: 26px;
+  line-height: 40px;
+  margin: 0;
+  text-align: center;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  transform: translateY(50%);
+}
+
+.roadmap > li {
+  flex-grow: 1;
+}
+
+.roadmap > li > div {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(50%) translateY(-95px);
+}
+.roadmap > li:nth-child(even) > div {
+  transform: translateY(-50%) translateY(95px);
+}
+
+.roadmap > li + li {
+  margin-left: -2px;
+}
+
+.roadmap > li > div > * {
+  flex-basis: 0;
+}
+
+.roadmap > li > div > h3 {
+  font-size: 54px;
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+
+.roadmap > li:nth-child(even) > div > h3 {
+  order: 1;
+  margin: 40px 0 0 0;
+}
+
+.roadmap > li > div > ul {
+  border: 2px solid #1abff3;
+  padding: 60px 50px 120px 50px;
+  border-radius: 0 0 50vw 50vw;
+  list-style: none;
+  margin: 0;
+}
+
+.roadmap > li:nth-child(even) > div > ul {
+  padding: 120px 50px 60px 50px;
+  border-radius: 50vw 50vw 0 0;
+}
+
+.roadmap > li > div > ul > li {
+  flex-direction: row;
+  font-size: 16px;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 22px;
+}
+
+.roadmap > li > div > ul > li::before {
+  display: block;
+  flex-shrink: 0;
+  content: '';
+  background-color: #1abff3;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  line-height: 0;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.roadmap > li > div > ul > li + li {
+  margin-top: 20px;
+}
