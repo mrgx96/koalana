@@ -38,3 +38,7 @@ a {
 #root > main {
   width: 100%;
 }
+
+.img-responsive {
+  max-width: 100%;
+}

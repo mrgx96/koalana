@@ -1,0 +1,45 @@
+.section {
+  padding: 150px 90px 0 90px;
+}
+
+.contentBorder {
+  background: linear-gradient(white, #1abff3);
+  border-radius: 30px;
+  padding: 2px;
+}
+
+.content {
+  background: var(--background);
+  display: flex;
+  flex-direction: row;
+  border-radius: 29px;
+  overflow: hidden;
+}
+
+.content > * {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content > *:first-child {
+  align-items: end;
+  justify-content: start;
+}
+
+.description {
+  padding: 70px 130px 50px 20px;
+}
+
+.description > h2 {
+  font-size: 54px;
+  margin-bottom: 23px;
+  letter-spacing: 0.5px;
+}
+
+.description > p {
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
