@@ -1,0 +1,11 @@
+.section {
+  background: url(../../assets/jpg/home.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 1280px;
+  padding-top: 200px;
+}
+
+.title {
+  display: block;
+  margin: 0 auto;
+}
