@@ -1,0 +1,36 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.progressBar {
+  overflow: hidden;
+  border-radius: 100vh;
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.progressBar > span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.progressBar > span:first-child {
+  opacity: 0.2;
+}
+
+.progressBar > span:last-child {
+  border-radius: 0 100vh 100vh 0;
+}
+
+.description {
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
