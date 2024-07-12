@@ -1,5 +1,6 @@
 import './App.css';
 import About from './components/about';
+import Footer from './components/footer';
 import Home from './components/home';
 import Navigation from './components/navigation';
 import Roadmap from './components/roadmap';
@@ -15,6 +16,7 @@ function App() {
         <Roadmap />
         <Tokenomics />
       </div>
+      <Footer />
     </main>
   );
 }
