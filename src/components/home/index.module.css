@@ -3,6 +3,7 @@
   background-size: cover;
   min-height: 1280px;
   padding-top: 200px;
+  position: relative;
 }
 
 .title {

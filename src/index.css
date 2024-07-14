@@ -14,6 +14,11 @@
   src: url(./assets/font/inter.ttf);
 }
 
+@font-face {
+  font-family: 'Baloo Bhai 2';
+  src: url(./assets/font/baloo-bhai-2.ttf);
+}
+
 :root {
   font-family: Syne;
   line-height: 1;
@@ -46,4 +51,10 @@ a {
 
 .img-responsive {
   max-width: 100%;
+}
+
+.clear-fix {
+  display: table;
+  content: '';
+  clear: both;
 }
