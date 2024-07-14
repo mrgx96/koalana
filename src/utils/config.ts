@@ -3,7 +3,7 @@ export const urls = {
   coingecko: '',
   twitter: '',
   telegram: '',
-  textools: '',
+  dextools: '',
   dexscreener: '',
 };
 

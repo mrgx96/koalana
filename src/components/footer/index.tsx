@@ -1,4 +1,5 @@
 import { scrollTo } from '../../utils/common';
+import { urls } from '../../utils/config';
 import coingecko from '../../assets/png/coingecko.png';
 import dexscreener from '../../assets/png/dexscreener.png';
 import dextools from '../../assets/png/dextools.png';
@@ -17,7 +18,7 @@ const Footer = () => {
       </p>
       <ul>
         <li>
-          <a href="">
+          <a href={urls.instagram}>
             <span>
               <img src={instagram} />
             </span>
@@ -25,7 +26,7 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href={urls.coingecko}>
             <span>
               <img src={coingecko} />
             </span>
@@ -33,7 +34,7 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href={urls.twitter}>
             <span>
               <img src={twitter} />
             </span>
@@ -41,7 +42,7 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href={urls.telegram}>
             <span>
               <img src={telegram} />
             </span>
@@ -49,7 +50,7 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href={urls.dextools}>
             <span>
               <img src={dextools} />
             </span>
@@ -57,7 +58,7 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href={urls.dexscreener}>
             <span>
               <img src={dexscreener} />
             </span>
