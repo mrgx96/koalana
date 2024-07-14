@@ -1,7 +1,22 @@
+import { useEffect, useState } from 'react';
 import { scrollTo } from '../../utils/common';
 import style from './index.module.css';
 
 const Navigation = () => {
+  const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 930) {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', onResize);
+
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
   return (
     <nav className={style.section}>
       <div className="container">
@@ -9,7 +24,19 @@ const Navigation = () => {
           <a href="/" className={style.logo}>
             <img src="/favicon.png" alt="Koalana" />
           </a>
-          <ul className={style.menu}>
+          <a
+            className={style.more}
+            onClick={(evt: React.MouseEvent) => {
+              evt.preventDefault();
+              evt.stopPropagation();
+              setOpen((prev) => !prev);
+            }}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          <ul className={open ? style.popup : style.menu}>
             <li>
               <a href="#home" onClick={(evt) => scrollTo(evt, 'home')}>
                 Home

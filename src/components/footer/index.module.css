@@ -38,11 +38,19 @@
 .section > ul {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 60px 0 0 0;
   list-style: none;
   max-width: 880px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 560px) {
+  .section > ul {
+    justify-content: center;
+    gap: 20px;
+  }
 }
 
 .section > ul + ul {

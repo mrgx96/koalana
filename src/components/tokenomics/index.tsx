@@ -11,7 +11,7 @@ const Tokenomics = () => {
         standard dummy.
       </p>
       <div className={style.tokenomics}>
-        <img src={tokenomics} />
+        <img src={tokenomics} className="img-responsive" />
         <Supply />
       </div>
     </section>

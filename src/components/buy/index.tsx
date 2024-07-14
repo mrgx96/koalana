@@ -50,7 +50,7 @@ const Buy = () => {
 
   return (
     <section className={style.section}>
-      <img src={koalana} />
+      <img src={koalana} className="img-responsive" />
       <section id="presale" className={style.widget}>
         <div className={style.title}>
           BUY NOW BEFORE

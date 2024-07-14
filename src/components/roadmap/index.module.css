@@ -19,15 +19,33 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 500px) {
+  .section > h2 {
+    font-size: 15vw;
+  }
+
+  .section > p {
+    font-size: 18px;
+  }
+}
+
 .roadmap {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 50px 0;
   list-style: none;
-  padding: 0;
+  padding: 50px 0 0 0;
   margin: 0;
   align-items: center;
-  transform: translateY(33.333vh);
-  padding-bottom: 50vh;
+}
+
+@media only screen and (min-width: 1230px) {
+  .roadmap {
+    padding: 0;
+    flex-direction: row;
+    transform: translateY(33.333vh);
+    padding-bottom: 50vh;
+  }
 }
 
 .roadmap > li {
@@ -37,15 +55,21 @@
 .roadmap > li > div {
   display: flex;
   flex-direction: column;
-  transform: translateY(50%) translateY(-95px);
   position: relative;
 }
-.roadmap > li:nth-child(even) > div {
-  transform: translateY(-50%) translateY(95px);
-}
 
-.roadmap > li + li {
-  margin-left: -2px;
+@media only screen and (min-width: 1230px) {
+  .roadmap > li > div {
+    transform: translateY(50%) translateY(-95px);
+  }
+
+  .roadmap > li:nth-child(even) > div {
+    transform: translateY(-50%) translateY(95px);
+  }
+
+  .roadmap > li + li {
+    margin-left: -2px;
+  }
 }
 
 .roadmap > li > div > * {
@@ -60,25 +84,33 @@
   position: relative;
 }
 
-.roadmap > li + li > div > h3::before {
-  display: block;
-  content: url(../../assets/png/sparkle.png);
-  position: absolute;
-  line-height: 0;
-  left: 0;
-  bottom: 0;
-  transform: translateX(-50%) translate(1px) translateY(50%);
+@media only screen and (max-width: 500px) {
+  .roadmap > li > div > h3 {
+    font-size: 10vw;
+  }
 }
 
-.roadmap > li:nth-child(even) > div > h3::before {
-  top: 0;
-  bottom: unset;
-  transform: translateX(-50%) translate(1px) translateY(-50%);
-}
+@media only screen and (min-width: 1230px) {
+  .roadmap > li + li > div > h3::before {
+    display: block;
+    content: url(../../assets/png/sparkle.png);
+    position: absolute;
+    line-height: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-50%) translate(1px) translateY(50%);
+  }
 
-.roadmap > li:nth-child(even) > div > h3 {
-  order: 1;
-  padding: 40px 0 0 0;
+  .roadmap > li:nth-child(even) > div > h3::before {
+    top: 0;
+    bottom: unset;
+    transform: translateX(-50%) translate(1px) translateY(-50%);
+  }
+
+  .roadmap > li:nth-child(even) > div > h3 {
+    order: 1;
+    padding: 40px 0 0 0;
+  }
 }
 
 .roadmap > li > div > ul {
@@ -89,9 +121,11 @@
   margin: 0;
 }
 
-.roadmap > li:nth-child(even) > div > ul {
-  padding: 120px 50px 60px 50px;
-  border-radius: 50vw 50vw 0 0;
+@media only screen and (min-width: 1230px) {
+  .roadmap > li:nth-child(even) > div > ul {
+    padding: 120px 50px 60px 50px;
+    border-radius: 50vw 50vw 0 0;
+  }
 }
 
 .roadmap > li > div > ul > li {

@@ -5,7 +5,7 @@ import Buy from '../buy';
 const Home = () => {
   return (
     <div id="home" className={style.section}>
-      <img className={style.title} src={title} alt="Koalana Title" />
+      <img className={[style.title, 'img-responsive'].join(' ')} src={title} alt="Koalana Title" />
       <Buy />
     </div>
   );
