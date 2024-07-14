@@ -51,7 +51,7 @@ const Buy = () => {
   return (
     <section className={style.section}>
       <img src={koalana} />
-      <section className={style.widget}>
+      <section id="presale" className={style.widget}>
         <div className={style.title}>
           BUY NOW BEFORE
           <small>The Price Increase!</small>

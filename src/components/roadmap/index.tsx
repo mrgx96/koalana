@@ -2,7 +2,7 @@ import style from './index.module.css';
 
 const Roadmap = () => {
   return (
-    <section className={style.section}>
+    <section id="roadmap" className={style.section}>
       <h2>Roadmap</h2>
       <p>Road to hit milestone for 2024 and 2025. Stay connected for updates.</p>
       <ul className={style.roadmap}>

@@ -3,7 +3,7 @@ import about from '../../assets/png/about.png';
 
 const About = () => {
   return (
-    <section className={style.section}>
+    <section id="about" className={style.section}>
       <div className={style.contentBorder}>
         <div className={style.content}>
           <div>

@@ -4,7 +4,7 @@ import Buy from '../buy';
 
 const Home = () => {
   return (
-    <div className={style.section}>
+    <div id="home" className={style.section}>
       <img className={style.title} src={title} alt="Koalana Title" />
       <Buy />
     </div>

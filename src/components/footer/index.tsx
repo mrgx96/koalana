@@ -1,14 +1,15 @@
-import style from './index.module.css';
-import instagram from '../../assets/png/instagram.png';
+import { scrollTo } from '../../utils/common';
 import coingecko from '../../assets/png/coingecko.png';
-import twitter from '../../assets/png/twitter.png';
-import telegram from '../../assets/png/telegram.png';
-import dextools from '../../assets/png/dextools.png';
 import dexscreener from '../../assets/png/dexscreener.png';
+import dextools from '../../assets/png/dextools.png';
+import instagram from '../../assets/png/instagram.png';
+import style from './index.module.css';
+import telegram from '../../assets/png/telegram.png';
+import twitter from '../../assets/png/twitter.png';
 
 const Footer = () => {
   return (
-    <footer className={style.section}>
+    <footer id="contact" className={style.section}>
       <h2>We're committed to creating value for our community</h2>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -66,16 +67,24 @@ const Footer = () => {
       </ul>
       <ul>
         <li>
-          <a href="">About</a>
+          <a href="#about" onClick={(evt) => scrollTo(evt, 'about')}>
+            About
+          </a>
         </li>
         <li>
-          <a href="">Roadmap</a>
+          <a href="#roadmap" onClick={(evt) => scrollTo(evt, 'roadmap')}>
+            Roadmap
+          </a>
         </li>
         <li>
-          <a href="">Tokenomics</a>
+          <a href="#tokenomics" onClick={(evt) => scrollTo(evt, 'tokenomics')}>
+            Tokenomics
+          </a>
         </li>
         <li>
-          <a href="">Presale</a>
+          <a href="#presale" onClick={(evt) => scrollTo(evt, 'presale')}>
+            Presale
+          </a>
         </li>
       </ul>
       <p>&copy; Copyright 2024, All Rights Reserved by Koalana</p>
