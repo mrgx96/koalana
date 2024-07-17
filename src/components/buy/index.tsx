@@ -1,7 +1,8 @@
-import style from './index.module.css';
-import koalana from '../../assets/png/koalana.png';
+import { coins, config } from '../../utils/config';
 import { useEffect, useState } from 'react';
-import { config } from '../../utils/config';
+import koalana from '../../assets/png/koalana.png';
+import logo from '../../assets/png/favicon.png';
+import style from './index.module.css';
 
 const address = import.meta.env.VITE_WALLET_ADDRESS;
 
@@ -11,6 +12,8 @@ const Buy = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [balance, setBalance] = useState<string>('');
+  const [network, setNetwork] = useState(coins.networks[0]);
+  const [cryptocurrency, setCryptocurrency] = useState(coins.networks[0].cryptocurrencies[0]);
 
   const getSolanaBalance = async () => {
     fetch(`https://solana-balance-express.vercel.app/${address}`)
@@ -77,6 +80,53 @@ const Buy = () => {
           </ul>
           <h2>Total Sol Raised</h2>
           <h3>SOL {Number(balance).toLocaleString()}</h3>
+        </div>
+        <div>
+          <ul className={style.network}>
+            {coins.networks.map((net) => (
+              <li
+                key={`net-${net.id}`}
+                className={net.id === network.id ? style.selected : undefined}
+                onClick={() => {
+                  setNetwork(net);
+                  setCryptocurrency(net.cryptocurrencies[0]);
+                }}
+                style={{ minWidth: `${100 / coins.networks.length}%` }}
+              >
+                <img src={net.image} />
+                <span>{net.name}</span>
+              </li>
+            ))}
+          </ul>
+          {network?.cryptocurrencies.length > 1 && (
+            <ul className={style.cryptocurrency}>
+              {network?.cryptocurrencies.map((cc) => (
+                <li
+                  key={`net-${network}-cryptocurrency-${cc.id}`}
+                  className={cc.id === cryptocurrency.id ? style.selected : undefined}
+                  onClick={() => {
+                    setCryptocurrency(cc);
+                  }}
+                  style={{ minWidth: `${100 / network.cryptocurrencies.length}%` }}
+                >
+                  <img src={cc.image} />
+                  <span>{cc.name}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className={style.form}>
+            <div className={style.pay}>
+              <label htmlFor="pay-amount">{cryptocurrency.name} you pay</label>
+              <input type="number" id="pay-amount" name="pay" />
+              {cryptocurrency && <img src={cryptocurrency?.image} />}
+            </div>
+            <div className={style.receive}>
+              <label htmlFor="receive-amount">Koalana you receive</label>
+              <input type="number" id="receive-amount" name="receive" />
+              <img src={logo} />
+            </div>
+          </div>
           <a className={style.button}>Buy</a>
         </div>
       </section>
