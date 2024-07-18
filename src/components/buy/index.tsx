@@ -1,5 +1,6 @@
 import { coins, config } from '../../utils/config';
-import { useEffect, useState } from 'react';
+import { ThreeDots } from 'react-loader-spinner';
+import { useCallback, useEffect, useState } from 'react';
 import koalana from '../../assets/png/koalana.png';
 import logo from '../../assets/png/favicon.png';
 import style from './index.module.css';
@@ -14,39 +15,52 @@ const Buy = () => {
   const [balance, setBalance] = useState<string>('');
   const [network, setNetwork] = useState(coins.networks[0]);
   const [cryptocurrency, setCryptocurrency] = useState(coins.networks[0].cryptocurrencies[0]);
+  const [loading, setLoading] = useState(false);
 
-  const getSolanaBalance = async () => {
+  const getSolanaBalance = useCallback(async () => {
+    if (loading) {
+      return;
+    }
+    setLoading(true);
     fetch(`https://solana-balance-express.vercel.app/${address}`)
       .then((response) => response.json())
       .then((data) => {
-        setBalance(data.solana || '0');
+        setBalance(data.solanaInUSD || '0');
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
-  };
+  }, [loading, setLoading]);
 
   const doubleDigit = (v: number) => (v < 10 ? `0${v}` : v);
 
+  const handleUpdateTimer = () => {
+    const saleDateUntil = new Date(import.meta.env.VITE_SALE_DATE_UNTIL).getTime();
+    const saleDateSince = new Date(import.meta.env.VITE_SALE_DATE_SINCE).getTime();
+    const now = new Date().getTime();
+    const distance = saleDateUntil - (now < saleDateSince ? saleDateSince : now);
+    if (distance > 0) {
+      const days = config.isPaused ? config.leftTime.days : Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = config.isPaused ? config.leftTime.hours : Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = config.isPaused ? config.leftTime.minutes : Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = config.isPaused ? config.leftTime.seconds : Math.floor((distance / 1000) % 60);
+      setDays(days);
+      setHours(hours);
+      setMinutes(minutes);
+      setSeconds(seconds);
+    }
+    return distance;
+  };
+
   useEffect(() => {
     const timerId = setInterval(() => {
-      const saleDateUntil = new Date(import.meta.env.VITE_SALE_DATE_UNTIL).getTime();
-      const saleDateSince = new Date(import.meta.env.VITE_SALE_DATE_SINCE).getTime();
-      const now = new Date().getTime();
-      const distance = saleDateUntil - (now < saleDateSince ? saleDateSince : now);
-      if (distance > 0) {
-        const days = config.isPaused ? config.leftTime.days : Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = config.isPaused ? config.leftTime.hours : Math.floor((distance / (1000 * 60 * 60)) % 24);
-        const minutes = config.isPaused ? config.leftTime.minutes : Math.floor((distance / (1000 * 60)) % 60);
-        const seconds = config.isPaused ? config.leftTime.seconds : Math.floor((distance / 1000) % 60);
-        setDays(days);
-        setHours(hours);
-        setMinutes(minutes);
-        setSeconds(seconds);
-      } else {
+      if (handleUpdateTimer() <= 0) {
         clearInterval(timerId);
       }
     }, 1000);
+    handleUpdateTimer();
     getSolanaBalance();
     return () => clearInterval(timerId);
   }, []);
@@ -79,7 +93,7 @@ const Buy = () => {
             </li>
           </ul>
           <h2>Total Sol Raised</h2>
-          <h3>SOL {Number(balance).toLocaleString()}</h3>
+          {loading ? <ThreeDots /> : <h3>$ {Number(balance).toLocaleString()}</h3>}
         </div>
         <div>
           <ul className={style.network}>
