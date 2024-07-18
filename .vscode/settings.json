@@ -22,7 +22,7 @@
     "editor.formatOnSave": true
   },
   "editor.tabSize": 2,
-  "cSpell.words": ["koalana", "tokenomics"],
+  "cSpell.words": ["koalana", "tokenomics", "solana"],
   "editor.codeActionsOnSave": {
     "source.removeUnusedImports": "explicit"
   }
