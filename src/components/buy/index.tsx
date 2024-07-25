@@ -63,6 +63,7 @@ const Buy = () => {
     handleUpdateTimer();
     getSolanaBalance();
     return () => clearInterval(timerId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
