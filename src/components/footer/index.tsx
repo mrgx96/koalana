@@ -6,11 +6,7 @@ import dextools from '../../assets/png/dextools.png';
 import instagram from '../../assets/png/instagram.png';
 import style from './index.module.css';
 import telegram from '../../assets/png/telegram.png';
-<<<<<<< HEAD
 import twitter from '../../assets/png/x.png';
-=======
-import twitter from '../../assets/png/twitter.png';
->>>>>>> f050d5828710001133bf35a21f4fc3018960039c
 
 const Footer = () => {
   return (
@@ -24,11 +20,7 @@ const Footer = () => {
         <li>
           <a href={urls.instagram}>
             <span>
-<<<<<<< HEAD
               <img src={instagram} width={48} />
-=======
-              <img src={instagram} />
->>>>>>> f050d5828710001133bf35a21f4fc3018960039c
             </span>
             instagram
           </a>
@@ -36,11 +28,7 @@ const Footer = () => {
         <li>
           <a href={urls.coingecko}>
             <span>
-<<<<<<< HEAD
               <img src={coingecko} width={48} />
-=======
-              <img src={coingecko} />
->>>>>>> f050d5828710001133bf35a21f4fc3018960039c
             </span>
             coingecko
           </a>
@@ -48,11 +36,7 @@ const Footer = () => {
         <li>
           <a href={urls.twitter}>
             <span>
-<<<<<<< HEAD
               <img src={twitter} width={48} />
-=======
-              <img src={twitter} />
->>>>>>> f050d5828710001133bf35a21f4fc3018960039c
             </span>
             twitter
           </a>
@@ -60,11 +44,7 @@ const Footer = () => {
         <li>
           <a href={urls.telegram}>
             <span>
-<<<<<<< HEAD
               <img src={telegram} width={48} />
-=======
-              <img src={telegram} />
->>>>>>> f050d5828710001133bf35a21f4fc3018960039c
             </span>
             telegram
           </a>
@@ -72,11 +52,7 @@ const Footer = () => {
         <li>
           <a href={urls.dextools}>
             <span>
-<<<<<<< HEAD
               <img src={dextools} width={48} />
-=======
-              <img src={dextools} />
->>>>>>> f050d5828710001133bf35a21f4fc3018960039c
             </span>
             dextools
           </a>
@@ -84,11 +60,7 @@ const Footer = () => {
         <li>
           <a href={urls.dexscreener}>
             <span>
-<<<<<<< HEAD
               <img src={dexscreener} width={48} />
-=======
-              <img src={dexscreener} />
->>>>>>> f050d5828710001133bf35a21f4fc3018960039c
             </span>
             dexscreener
           </a>
@@ -110,19 +82,11 @@ const Footer = () => {
             Tokenomics
           </a>
         </li>
-<<<<<<< HEAD
         {/* <li>
           <a href="#presale" onClick={(evt) => scrollTo(evt, 'presale')}>
             Presale
           </a>
         </li> */}
-=======
-        <li>
-          <a href="#presale" onClick={(evt) => scrollTo(evt, 'presale')}>
-            Presale
-          </a>
-        </li>
->>>>>>> f050d5828710001133bf35a21f4fc3018960039c
       </ul>
       <p>&copy; Copyright 2024, All Rights Reserved by Koalana</p>
     </footer>
