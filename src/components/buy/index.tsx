@@ -1,6 +1,13 @@
 import { coins, config } from '../../utils/config';
+<<<<<<< HEAD
 import { useCallback, useEffect, useState } from 'react';
 import koalana from '../../assets/png/koalana.png';
+=======
+import { ThreeDots } from 'react-loader-spinner';
+import { useCallback, useEffect, useState } from 'react';
+import koalana from '../../assets/png/koalana.png';
+import logo from '../../assets/png/favicon.png';
+>>>>>>> f050d5828710001133bf35a21f4fc3018960039c
 import style from './index.module.css';
 
 const address = import.meta.env.VITE_WALLET_ADDRESS;
@@ -67,7 +74,11 @@ const Buy = () => {
   return (
     <section className={style.section}>
       <img src={koalana} className="img-responsive" />
+<<<<<<< HEAD
       {/* <section id="presale" className={style.widget}>
+=======
+      <section id="presale" className={style.widget}>
+>>>>>>> f050d5828710001133bf35a21f4fc3018960039c
         <div className={style.title}>
           BUY NOW BEFORE
           <small>The Price Increase!</small>
@@ -142,7 +153,11 @@ const Buy = () => {
           </div>
           <a className={style.button}>Buy</a>
         </div>
+<<<<<<< HEAD
       </section> */}
+=======
+      </section>
+>>>>>>> f050d5828710001133bf35a21f4fc3018960039c
     </section>
   );
 };

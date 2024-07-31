@@ -15,8 +15,12 @@ const ProgressBar = (props: ProgressBarProps) => {
         <span style={{ backgroundColor: color, right: `${100 - value}%` }} />
       </div>
       <div className={style.description}>
+<<<<<<< HEAD
         {label}
         {/* : {value}% */}
+=======
+        {label}: {value}%
+>>>>>>> f050d5828710001133bf35a21f4fc3018960039c
       </div>
     </section>
   );

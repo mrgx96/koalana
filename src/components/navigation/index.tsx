@@ -57,11 +57,19 @@ const Navigation = () => {
                 Tokenomics
               </a>
             </li>
+<<<<<<< HEAD
             {/* <li>
               <a href="#presale" onClick={(evt) => scrollTo(evt, 'presale')}>
                 Presale
               </a>
             </li> */}
+=======
+            <li>
+              <a href="#presale" onClick={(evt) => scrollTo(evt, 'presale')}>
+                Presale
+              </a>
+            </li>
+>>>>>>> f050d5828710001133bf35a21f4fc3018960039c
             <li>
               <a href="#contact" onClick={(evt) => scrollTo(evt, 'contact')}>
                 Contact
