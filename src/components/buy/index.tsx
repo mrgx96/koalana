@@ -1,4 +1,3 @@
-import koalana from '../../assets/png/koalana.png';
 import style from './index.module.css';
 
 // const address = import.meta.env.VITE_WALLET_ADDRESS;
@@ -64,7 +63,7 @@ const Buy = () => {
 
   return (
     <section className={style.section}>
-      <img src={koalana} className="img-responsive" />
+      {/* <img src={koalana} className="img-responsive" /> */}
       {/* <section id="presale" className={style.widget}>
         <div className={style.title}>
           BUY NOW BEFORE
