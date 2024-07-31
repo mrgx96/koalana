@@ -1,0 +1,29 @@
+.section {
+  background: url(../../assets/jpg/home.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 1280px;
+  padding-top: 200px;
+  position: relative;
+}
+
+.title {
+  display: block;
+  margin: 0 auto;
+}
+
+.solana {
+  max-width: 495px;
+  margin: 0 auto 70px auto;
+  display: block;
+
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .solana {
+    max-width: 350px;
+    margin: 0 auto 50px auto;
+  }
+}

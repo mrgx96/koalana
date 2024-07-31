@@ -1,0 +1,72 @@
+.section {
+  padding-top: 105px;
+  margin: 0 auto;
+}
+
+.section > h2 {
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: -1px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.section > p {
+  display: block;
+  margin: 0 auto;
+  font-family: Inter;
+  font-size: 26px;
+  line-height: 40px;
+  text-align: center;
+  max-width: 1030px;
+}
+
+@media only screen and (max-width: 560px) {
+  .section > h2 {
+    font-size: 10vw;
+  }
+
+  .section > p {
+    font-size: 5vw;
+  }
+}
+
+.tokenomics {
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0;
+  padding-top: 85px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1230px) {
+  .tokenomics {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 1630px) {
+  .section {
+    max-width: 1440px;
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  .section {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .section {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .section {
+    max-width: 100%;
+  }
+}
