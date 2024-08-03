@@ -50,6 +50,7 @@
 
 .roadmap > li {
   flex-grow: 1;
+  width: 100%;
 }
 
 .roadmap > li > div {
@@ -113,22 +114,29 @@
   }
 }
 
-.roadmap > li > div > ul {
+.roadmap > li > div > div {
   border: 2px solid #1abff3;
   padding: 60px 50px 120px 50px;
   border-radius: 0 0 50vw 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roadmap > li > div > div > ul {
   list-style: none;
-  margin: 0;
+  padding: 0;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 1230px) {
-  .roadmap > li:nth-child(even) > div > ul {
+  .roadmap > li:nth-child(even) > div > div {
     padding: 120px 50px 60px 50px;
     border-radius: 50vw 50vw 0 0;
   }
 }
 
-.roadmap > li > div > ul > li {
+.roadmap > li > div > div > ul > li {
   flex-direction: row;
   font-size: 16px;
   line-height: 1.4;
@@ -136,7 +144,7 @@
   padding-left: 22px;
 }
 
-.roadmap > li > div > ul > li::before {
+.roadmap > li > div > div > ul > li::before {
   display: block;
   flex-shrink: 0;
   content: '';
@@ -150,6 +158,6 @@
   top: 4px;
 }
 
-.roadmap > li > div > ul > li + li {
+.roadmap > li > div > div > ul > li + li {
   margin-top: 20px;
 }

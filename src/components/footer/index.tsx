@@ -13,13 +13,14 @@ const Footer = () => {
     <footer id="contact" className={style.section}>
       <h2>We're committed to creating value for our community</h2>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy.
+        Koalana is a community driven project and focuses on creating value for the community members first and
+        foremost. Stay up to date with our latest news and milestones achievements by following our social channels
+        below
       </p>
       <ul>
         <li>
           <a href={urls.instagram}>
-            <span>
+            <span className={style.comingSoon}>
               <img src={instagram} width={48} />
             </span>
             instagram
@@ -27,7 +28,7 @@ const Footer = () => {
         </li>
         <li>
           <a href={urls.coingecko}>
-            <span>
+            <span className={style.comingSoon}>
               <img src={coingecko} width={48} />
             </span>
             coingecko
@@ -51,7 +52,7 @@ const Footer = () => {
         </li>
         <li>
           <a href={urls.dextools}>
-            <span>
+            <span className={style.comingSoon}>
               <img src={dextools} width={48} />
             </span>
             dextools
@@ -59,7 +60,7 @@ const Footer = () => {
         </li>
         <li>
           <a href={urls.dexscreener}>
-            <span>
+            <span className={style.comingSoon}>
               <img src={dexscreener} width={48} />
             </span>
             dexscreener

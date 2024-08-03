@@ -38,11 +38,6 @@ const Navigation = () => {
           </a>
           <ul className={open ? style.popup : style.menu}>
             <li>
-              <a href="#home" onClick={(evt) => scrollTo(evt, 'home')}>
-                Home
-              </a>
-            </li>
-            <li>
               <a href="#about" onClick={(evt) => scrollTo(evt, 'about')}>
                 About
               </a>
@@ -54,7 +49,7 @@ const Navigation = () => {
             </li>
             <li>
               <a href="#tokenomics" onClick={(evt) => scrollTo(evt, 'tokenomics')}>
-                Tokenomics
+                Koalanomics
               </a>
             </li>
             {/* <li>

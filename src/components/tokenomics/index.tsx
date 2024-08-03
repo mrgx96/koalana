@@ -5,7 +5,7 @@ import Supply from '../supply';
 const Tokenomics = () => {
   return (
     <section id="tokenomics" className={style.section}>
-      <h2>Tokenomics</h2>
+      <h2>Koalanomics</h2>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
         standard dummy.

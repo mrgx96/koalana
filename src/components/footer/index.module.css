@@ -88,3 +88,19 @@
   min-width: 64px;
   min-height: 64px;
 }
+
+.comingSoon {
+  position: relative;
+}
+
+.comingSoon::after {
+  display: block;
+  background: url(../../assets/png/coming-soon.png) no-repeat center center;
+  background-size: contain;
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -32px;
+  right: -16px;
+}
