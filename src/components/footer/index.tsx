@@ -79,8 +79,8 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href="#tokenomics" onClick={(evt) => scrollTo(evt, 'tokenomics')}>
-            Tokenomics
+          <a href="#koalanomics" onClick={(evt) => scrollTo(evt, 'koalanomics')}>
+            Koalanomics
           </a>
         </li>
         {/* <li>
