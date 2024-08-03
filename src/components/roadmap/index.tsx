@@ -37,7 +37,7 @@ const Roadmap = () => {
               <ul>
                 <li>CEX listing</li>
                 <li>Increasing marketing efforts</li>
-                <li>Memes and community activities</li>
+                <li>Memes and community initiatives</li>
               </ul>
             </div>
           </div>
