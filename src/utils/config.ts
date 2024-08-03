@@ -8,8 +8,8 @@ import usdt from '../assets/png/coins/usdt.png';
 export const urls = {
   instagram: 'https://',
   coingecko: 'https://',
-  twitter: 'https://',
-  telegram: 'https://',
+  twitter: 'https://x.com/koalana_sol',
+  telegram: 'https://t.me/koalanasol',
   dextools: 'https://',
   dexscreener: 'https://',
 };
