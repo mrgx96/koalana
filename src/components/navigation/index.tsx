@@ -48,7 +48,7 @@ const Navigation = () => {
               </a>
             </li>
             <li>
-              <a href="#tokenomics" onClick={(evt) => scrollTo(evt, 'tokenomics')}>
+              <a href="#koalanomics" onClick={(evt) => scrollTo(evt, 'koalanomics')}>
                 Koalanomics
               </a>
             </li>
