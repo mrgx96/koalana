@@ -17,9 +17,6 @@ const About = () => {
                 Koalana's mission is to journey to the moon and take as many people as possible with him, so buckle up
                 and enjoy the ride!
               </p>
-              <p>
-                The only contract address: 4oykvuyVrL6hb4mizuAeNfyYZK6J7aR6Ps4NJvqcy5Dz
-              </p>
             </div>
           </div>
         </div>
